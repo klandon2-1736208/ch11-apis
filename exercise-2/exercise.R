@@ -48,14 +48,14 @@ names(data)
 
 # Flatten the movie reviews content into a data structure called `reviews`
 
-reviews <- data$results
+reviews <- flatten(data$results)
 
 # From the most recent review, store the headline, short summary, and link to
 # the full article, each in their own variables
 
 headline <- reviews$headline
 short_summary <- reviews$summary_short
-link <- reviews$link$url
+link <- reviews$link.url
 
 # Create a list of the three pieces of information from above. 
 # Print out the list.
